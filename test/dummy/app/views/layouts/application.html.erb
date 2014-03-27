@@ -8,6 +8,14 @@
 </head>
 <body>
 
+<%if session[:token] %>
+Usuário: <%= session[:token]%>
+<% else %>
+Usuário não logado...
+<% end %>
+
+<hr>
+
 <%= yield %>
 
 </body>

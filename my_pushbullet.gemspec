@@ -7,11 +7,11 @@ require "my_pushbullet/version"
 Gem::Specification.new do |s|
   s.name        = "my_pushbullet"
   s.version     = MyPushbullet::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of MyPushbullet."
-  s.description = "TODO: Description of MyPushbullet."
+  s.authors     = ["Marcio Mangar"]
+  s.email       = ["marcio.mangar@gmail.com"]
+  s.homepage    = "http://about.me/mangar"
+  s.summary     = "Summary of MyPushbullet."
+  s.description = "Description of MyPushbullet."
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
