@@ -3,6 +3,11 @@ class DemoController < ApplicationController
   def index    
   end
 
+  def logout
+    session[:token] = nil
+    redirect_to root_path
+  end
+
   # 
   # 
   def set_token

@@ -1,6 +1,13 @@
 <h2>Send Data</h2>
 
 
+<% if flash[:message]%>
+  <div class="alert alert-success">
+  <%= flash[:message]%>
+  </div>
+<% end %>
+
+
 <!--
   Devices:
 <%= @devices%>
@@ -9,7 +16,6 @@
 
 <%
   options = ""
-
   _devices = @devices["devices"]
   _devices.each do |_dev|
     options += "<option value=\"#{_dev["iden"]}\">#{_dev["extras"]["model"]} - #{_dev["extras"]["android_version"]} - #{_dev["extras"]["manufacturer"]}</option>"
@@ -17,21 +23,23 @@
 %>
 
 
-<%= form_tag(push_path, method: :post) do%>
-<div class="innerLR">
-  Devices: <br>
-  <%= select_tag "iden", options.html_safe %>
-</div>
+<%= form_tag(push_path, method: :post, :role => "form") do%>
 
-<div class="innerLR">
-  Title: <br>
-  <%= text_field_tag 'title' %>
-</div>
+  <div class="form-group">
+      <label for="iden">Devices:</label>
+      <%= select_tag "iden", options.html_safe, :class=> "form-control" %>
+  </div>
 
-<div class="innerLR">
-  Body: <br>
-  <%= text_area_tag 'body'%>
-</div>
+  <div class="form-group">
+      <label for="title">Title:</label>
+      <%= text_field_tag 'title', '', :class => "form-control" %>
+  </div>
+
+
+  <div class="form-group">
+      <label for="body">Body:</label>
+      <%= text_area_tag 'body', '', :class => "form-control" %>
+  </div>
 
 
 <div class="innerT">
