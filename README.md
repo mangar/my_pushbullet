@@ -1,16 +1,50 @@
 # MyPushbullet
 
+This is a gem to run in a Rails project to connect and send push notifications to your Android and browser (Firefox and Chrome) via [Pushbullet](https://www.pushbullet.com). If you don't have the app installed in your mobile, you should.
 
 
-
-- - - 
-
-## Usage
+## Usage 
 
 1. Install the Gem
 1. Add the API Key
 1. List the Devices
 1. Push a note
+
+
+## Installing
+
+As a regular ruby gem, add this entry in your Gemfile:
+
+    gem 'my_pushbullet'
+
+and then
+
+    bundle install
+
+
+
+## Coding
+
+### Configuring
+
+    push = MyPush.new :token => "YOUR API_KEY"
+    
+    
+### Listing devices    
+    
+    push.devices
+
+
+### Sending a note
+
+
+    push = MyPush.new :token => "YOUR API_KEY"
+    push.push :type => MyPush::PUSH_TYPE_NOTE, 
+              :title => "Message Title", 
+              :body => "Body content...", 
+              :iden => "YOUR DEVICE IDENTIFICATION"
+
+
 
 
 ## TODO
