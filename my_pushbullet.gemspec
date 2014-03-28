@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = MyPushbullet::VERSION
   s.authors     = ["Marcio Mangar"]
   s.email       = ["marcio.mangar@gmail.com"]
-  s.homepage    = "http://about.me/mangar"
+  s.homepage    = "http://github.com/mangar/my_pushbullet"
   s.summary     = "Summary of MyPushbullet."
   s.description = "Description of MyPushbullet."
 
