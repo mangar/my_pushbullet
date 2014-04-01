@@ -1,4 +1,4 @@
-# MyPushbullet
+# MyPushbullet - 0.0.2
 
 This is a gem to run in a Rails project to connect and send push notifications to your Android and browser (Firefox and Chrome) via [Pushbullet](https://www.pushbullet.com). If you don't have the app installed in your mobile, you should.
 
