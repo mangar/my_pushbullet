@@ -12,5 +12,3 @@ source "https://rubygems.org"
 
 # To use debugger
 # gem 'debugger'
-
-gem 'unirest', '1.1.2'
