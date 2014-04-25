@@ -44,11 +44,10 @@ and then
 
 
     push = MyPush.new :token => "YOUR API_KEY"
-    push.push :type => MyPush::PUSH_TYPE_NOTE, 
-              :title => "Message Title", 
-              :body => "Body content...", 
-              :iden => "YOUR DEVICE IDENTIFICATION"
-
+    push.push type:MyPush::PUSH_TYPE_NOTE, 
+              title:"Message Title", 
+              body:"Body content...", 
+              device_iden:"YOUR DEVICE IDENTIFICATION"
 
 
 
@@ -58,6 +57,7 @@ and then
 2. send an address
 3. send a list
 4. send a file
+5. find device by name, return the device id
 
 
 - - - 
