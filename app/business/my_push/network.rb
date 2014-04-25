@@ -1,4 +1,4 @@
-require 'net/http'
+require 'unirest'
 
 module MyPush::Network
 
